@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Groupie tracker</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+  </head>
+  <body>
+     <h1 style="text-align: center">Bienvenue sur Groupie Tracker</h1>
+     <div id="searchbar" class="recherche">         
+      <form action="/search" method="GET">
+        <input type="text" name="q" placeholder="Recherche...">
+        <button type="submit">Valider</button>
+</div>
+      {{range $item := . }}
+      <div class="artist">      
+        <h2 class="name">{{ $item.Name }}</h2>
+        <a href="/artist?id={{$item.Id}}">
+          <img 
+          src="{{ $item.Image }}" 
+          alt="image de l'artiste"
+          class="image"/>
+      </div>
+    {{ end }}
+ </body>
+      <div class="locations"
+      <h3 class="locations"></h3>
+      
+
+       
+  </body>
+</html>
